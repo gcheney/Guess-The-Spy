@@ -1,4 +1,4 @@
-package guessthespy;
+package spygames;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,16 +11,16 @@ import java.util.Random;
  * SpyGame Class
  * This class represents a new instantiation 
  * of the Spy Game UI 
- * @author glen
+ * @author glendon cheney
  */
-public class GuessTheSpy {
+public class SpyGames {
 	
     private int spyPlayerNumber;
     private String spyWord, alliesWord;
     private static List<Entry<String, String>> wordEntryList;
     private static int gameCount = 0;
     
-    public GuessTheSpy(int numPlayers) {
+    public SpyGames(int numPlayers) {
         setSpy(numPlayers);
         assignWords();    
     }

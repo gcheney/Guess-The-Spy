@@ -1,4 +1,4 @@
-package guessthespy;
+package spygames;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,7 +14,7 @@ import javax.swing.*;
 /**
  * @author glendon cheney
  */
-public class GuessTheSpyUI extends JFrame {
+public class SpyGamesUI extends JFrame {
     
 	private static final long serialVersionUID = 1L;
 	private ButtonGroup btnGroup = new ButtonGroup();
@@ -22,12 +22,12 @@ public class GuessTheSpyUI extends JFrame {
     private String [] playerWords = new String[MAX_PLAYERS];
     private JRadioButton[] radios = new JRadioButton[MAX_PLAYERS];
     private int numPlayers = 0, spyPlayer = 0, spyWins = 0, alliesWins = 0;
-    private GuessTheSpy game; //the game
+    private SpyGames game; //the game
     
     /**
      * Creates new form SpyGameUI
      */
-    public GuessTheSpyUI() {
+    public SpyGamesUI() {
         initComponents();
         initForm();
     }
@@ -405,7 +405,7 @@ public class GuessTheSpyUI extends JFrame {
             radBtn.setEnabled(true);
         }
         //Set up a new SpyGame object
-        game = new GuessTheSpy(numPlayers);
+        game = new SpyGames(numPlayers);
         
         //assign values from game
         spyPlayer = game.getSpyNumber();
@@ -481,7 +481,7 @@ public class GuessTheSpyUI extends JFrame {
 
     private void btnGameStatsActionPerformed(ActionEvent evt) {
         //Calculate and display wins/losses
-        int totalGames = GuessTheSpy.getGameCount();
+        int totalGames = SpyGames.getGameCount();
         int quitGames = totalGames- (spyWins + alliesWins);
         JOptionPane.showMessageDialog(this, 
                 "The spy has won " + spyWins + " games.\n" 
@@ -516,16 +516,16 @@ public class GuessTheSpyUI extends JFrame {
             }
         } 
         catch (ClassNotFoundException ex) {
-            Logger.getLogger(GuessTheSpyUI.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SpyGamesUI.class.getName()).log(Level.SEVERE, null, ex);
         } 
         catch (InstantiationException ex) {
-            Logger.getLogger(GuessTheSpyUI.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SpyGamesUI.class.getName()).log(Level.SEVERE, null, ex);
         } 
         catch (IllegalAccessException ex) {
-            Logger.getLogger(GuessTheSpyUI.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SpyGamesUI.class.getName()).log(Level.SEVERE, null, ex);
         } 
         catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(GuessTheSpyUI.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SpyGamesUI.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         /*
@@ -534,7 +534,7 @@ public class GuessTheSpyUI extends JFrame {
         EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new GuessTheSpyUI().setVisible(true);
+                new SpyGamesUI().setVisible(true);
             }
             
         });
