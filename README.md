@@ -2,7 +2,12 @@
 
 This game involves a number of players. Each player is given a random word, but one player is given a synonym of that word instead. 
 
+# Download
+
+A runnable JAR version of the game can be found [here](https://github.com/gcheney/spy-games/releases/download/1.0/SpyGames.jar).
+
 # How To Play
+
 The players must then ask each other questions related to their word, and at the end of the round make a guess as to which player is "The Spy". The game ends and the players win if they correctly guess the Spy. If the Spy survives all round, then they are the only winner. 
 
 # Screenshots
